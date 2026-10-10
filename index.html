@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZION — разработка сайтов, лендингов и веб-сервисов</title>
+  <meta name="description" content="ZION — продуктовая команда: сайты, лендинги и веб-сервисы полного цикла. Исследование, прототип, дизайн, разработка, запуск и поддержка.">
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Прелоадер -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <span class="preloader__percent" id="preloaderPercent">0%</span>
+  </div>
+
+  <!-- ===== 1. HEADER ===== -->
+  <header class="header" id="header">
+    <div class="header__inner container">
+      <a href="#hero" class="logo" aria-label="ZION — на главную">ZI<em>on</em></a>
+
+      <nav class="nav" id="mainNav" aria-label="Основная навигация">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#services">Услуги</a></li>
+          <li><a class="nav__link" href="#cases">Кейсы</a></li>
+          <li><a class="nav__link" href="#process">Процесс</a></li>
+          <li><a class="nav__link" href="#stack">Стек</a></li>
+          <li><a class="nav__link" href="#reviews">Отзывы</a></li>
+          <li><a class="nav__link" href="#contacts">Контакты</a></li>
+        </ul>
+        <div class="nav__mobile-actions">
+          <a class="nav__phone" href="tel:+74951234567">+7 (495) 123-45-67</a>
+          <button class="btn btn--primary" type="button" data-modal-open>Обсудить проект</button>
+        </div>
+      </nav>
+
+      <div class="header__actions">
+        <a class="header__phone mono" href="tel:+74951234567">+7 (495) 123-45-67</a>
+        <button class="btn btn--primary header__cta" type="button" data-modal-open>Обсудить проект</button>
+        <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mainNav">
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== 2. HERO ===== -->
+    <section class="hero section hero--start" id="hero">
+      <div class="container">
+        <p class="hero__slash mono reveal">
+          <span class="reveal__line"><span class="reveal__inner">/ Лендинги&nbsp;&nbsp;/ Корпоративные сайты&nbsp;&nbsp;/ Интернет-магазины&nbsp;&nbsp;/ Веб-приложения</span></span>
+        </p>
+
+        <h1 class="hero__title reveal">
+          <span class="reveal__line"><span class="reveal__inner">Разрабатываем</span></span>
+          <span class="reveal__line"><span class="reveal__inner">сайты, лендинги</span></span>
+          <span class="reveal__line"><span class="reveal__inner">и веб-сервисы</span></span>
+        </h1>
+
+        <div class="hero__bottom">
+          <p class="lead hero__lead fade-up">Полный цикл: исследование, прототип, дизайн, разработка, запуск и поддержка. Не подрядчик, а продуктовая команда — с кодом, документацией и метриками на выходе.</p>
+          <div class="hero__buttons fade-up">
+            <button class="btn btn--dark" type="button" data-modal-open>Обсудить проект</button>
+            <a class="btn btn--ghost" href="#cases">Смотреть кейсы</a>
+          </div>
+        </div>
+
+        <figure class="hero__media fade-up">
+          <img src="https://picsum.photos/id/1040/1440/640" alt="Рабочее пространство команды разработки ZION" width="1440" height="640" decoding="async">
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== 3. СТАТИСТИКА ===== -->
+    <section class="stats section section--gradient" id="stats">
+      <div class="container">
+        <ul class="stats__list">
+          <li class="stats__item fade-up">
+            <span class="stats__num" data-count="75" data-suffix="+">0</span>
+            <span class="stats__label">профессионалов в команде</span>
+          </li>
+          <li class="stats__sep" aria-hidden="true">/</li>
+          <li class="stats__item fade-up">
+            <span class="stats__num" data-count="15" data-suffix="">0</span>
+            <span class="stats__label">лет на рынке</span>
+          </li>
+          <li class="stats__sep" aria-hidden="true">/</li>
+          <li class="stats__item fade-up">
+            <span class="stats__num" data-count="100" data-suffix="+">0</span>
+            <span class="stats__label">проектов</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== 4. КЛИЕНТЫ (MARQUEE) ===== -->
+    <section class="clients section section--gradient" id="clients" aria-label="Наши клиенты">
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track marquee__track--l1">
+          <div class="marquee__group">
+            <span class="marquee__item">Hoff</span><span class="marquee__slash">/</span>
+            <span class="marquee__item">Яндекс</span><span class="marquee__slash">/</span>
+            <span class="marquee__item">Сбер</span><span class="marquee__slash">/</span>
+            <span class="marquee__item">Сандоз</span><span class="marquee__slash">/</span>
+            <span class="marquee__item">Gulliver</span><span class="marquee__slash">/</span>
+            <span class="marquee__item">РОЛЬФ</span><span class="marquee__slash">/</span>
+            <span class="marquee__item">Calltouch</span><span class="marquee__slash">/</span>
+            <span class="marquee__item">the diversity</span><span class="marquee__slash">/</span>
+          </div>
+          <div class="marquee__group">
+            <span class="marquee__item">Hoff</span><span class="marquee__slash">/</span>
+            <span class="marquee__item">Яндекс</span><span class="marquee__slash">/</span>
+            <span class="marquee__item">Сбер</span><span class="marquee__slash">/</span>
+            <span class="marquee__item">Сандоз</span><span class="marquee__slash">/</span>
+            <span class="marquee__item">Gulliver</span><span class="marquee__slash">/</span>
+            <span class="marquee__item">РОЛЬФ</span><span class="marquee__slash">/</span>
+            <span class="marquee__item">Calltouch</span><span class="marquee__slash">/</span>
+            <span class="marquee__item">the diversity</span><span class="marquee__slash">/</span>
+          </div>
+        </div>
+        <div class="marquee__track marquee__track--l2">
+          <div class="marquee__group">
+            <span class="marquee__item">Сандоз</span><span class="marquee__slash">/</span>
+            <span class="marquee__item">Gulliver</span><span class="marquee__slash">/</span>
+            <span class="marquee__item">РОЛЬФ</span><span class="marquee__slash">/</span>
+            <span class="marquee__item">Calltouch</span><span class="marquee__slash">/</span>
+            <span class="marquee__item">the diversity</span><span class="marquee__slash">/</span>
+            <span class="marquee__item">Hoff</span><span class="marquee__slash">/</span>
+            <span class="marquee__item">Яндекс</span><span class="marquee__slash">/</span>
+            <span class="marquee__item">Сбер</span><span class="marquee__slash">/</span>
+          </div>
+          <div class="marquee__group">
+            <span class="marquee__item">Сандоз</span><span class="marquee__slash">/</span>
+            <span class="marquee__item">Gulliver</span><span class="marquee__slash">/</span>
+            <span class="marquee__item">РОЛЬФ</span><span class="marquee__slash">/</span>
+            <span class="marquee__item">Calltouch</span><span class="marquee__slash">/</span>
+            <span class="marquee__item">the diversity</span><span class="marquee__slash">/</span>
+            <span class="marquee__item">Hoff</span><span class="marquee__slash">/</span>
+            <span class="marquee__item">Яндекс</span><span class="marquee__slash">/</span>
+            <span class="marquee__item">Сбер</span><span class="marquee__slash">/</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 5. УСЛУГИ ===== -->
+    <section class="services section" id="services">
+      <div class="container">
+        <h2 class="section__title reveal">
+          <span class="reveal__line"><span class="reveal__inner"><em>Наши</em> Услуги</span></span>
+        </h2>
+        <ul class="services__list">
+          <li class="services__item services__item--big fade-up">
+            <a href="#" class="services__row" data-modal-open>
+              <span class="services__name">/Разработка лендингов</span>
+              <span class="services__desc">Быстрые страницы под запуск продукта и рекламу</span>
+            </a>
+          </li>
+          <li class="services__item services__item--big fade-up">
+            <a href="#" class="services__row" data-modal-open>
+              <span class="services__name">/Корпоративные сайты</span>
+              <span class="services__desc">Многостраничные сайты с интеграцией в CRM</span>
+            </a>
+          </li>
+          <li class="services__item services__item--big fade-up">
+            <a href="#" class="services__row" data-modal-open>
+              <span class="services__name">/Веб-приложения</span>
+              <span class="services__desc">Личные кабинеты, порталы, внутренние сервисы</span>
+            </a>
+          </li>
+          <li class="services__item services__item--big fade-up">
+            <a href="#" class="services__row" data-modal-open>
+              <span class="services__name">/Дизайн интерфейсов</span>
+              <span class="services__desc">UX-исследование, прототип, UI-кит</span>
+            </a>
+          </li>
+          <li class="services__item fade-up">
+            <a href="#" class="services__row" data-modal-open>
+              <span class="services__name">/Мобильные приложения</span>
+              <span class="services__desc">iOS и Android, нативные и кроссплатформенные</span>
+            </a>
+          </li>
+          <li class="services__item fade-up">
+            <a href="#" class="services__row" data-modal-open>
+              <span class="services__name">/Поддержка и развитие</span>
+              <span class="services__desc">Доработки, хостинг, мониторинг 24/7</span>
+            </a>
+          </li>
+          <li class="services__item fade-up">
+            <a href="#" class="services__row" data-modal-open>
+              <span class="services__name">/Маркетинг и Production</span>
+              <span class="services__desc">Трафик, контент и мероприятия для запущенного продукта</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== 6. КЕЙСЫ ===== -->
+    <section class="cases section section--dark" id="cases">
+      <div class="container">
+        <div class="cases__head">
+          <h2 class="section__title reveal">
+            <span class="reveal__line"><span class="reveal__inner"><em>Наши</em> Кейсы</span></span>
+          </h2>
+          <div class="cases__arrows">
+            <button class="arrow-btn" id="casesPrev" type="button" aria-label="Предыдущие кейсы">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M12 4L6 10L12 16" stroke="currentColor" stroke-width="1.5"/></svg>
+            </button>
+            <button class="arrow-btn" id="casesNext" type="button" aria-label="Следующие кейсы">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M8 4L14 10L8 16" stroke="currentColor" stroke-width="1.5"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="cases__track-wrap fade-up">
+          <ul class="cases__track" id="casesTrack">
+            <li class="case-card">
+              <div class="case-card__media">
+                <img class="case-card__poster" src="https://picsum.photos/id/101/800/560" alt="Кейс: корпоративный сайт" width="800" height="560" loading="lazy" decoding="async">
+                <video class="case-card__video" muted loop playsinline preload="none" poster="https://picsum.photos/id/101/800/560" data-src="assets/video/case-01.mp4"></video>
+                <span class="case-card__badge mono">01</span>
+              </div>
+              <div class="case-card__info">
+                <h3 class="case-card__title">/Корпоративный сайт</h3>
+                <p class="case-card__cat mono">Разработка</p>
+              </div>
+            </li>
+            <li class="case-card">
+              <div class="case-card__media">
+                <img class="case-card__poster" src="https://picsum.photos/id/180/800/560" alt="Кейс: лендинг для запуска" width="800" height="560" loading="lazy" decoding="async">
+                <video class="case-card__video" muted loop playsinline preload="none" poster="https://picsum.photos/id/180/800/560" data-src="assets/video/case-02.mp4"></video>
+                <span class="case-card__badge mono">02</span>
+              </div>
+              <div class="case-card__info">
+                <h3 class="case-card__title">/Лендинг для запуска</h3>
+                <p class="case-card__cat mono">Разработка</p>
+              </div>
+            </li>
+            <li class="case-card">
+              <div class="case-card__media">
+                <img class="case-card__poster" src="https://picsum.photos/id/250/800/560" alt="Кейс: интернет-магазин" width="800" height="560" loading="lazy" decoding="async">
+                <video class="case-card__video" muted loop playsinline preload="none" poster="https://picsum.photos/id/250/800/560" data-src="assets/video/case-03.mp4"></video>
+                <span class="case-card__badge mono">03</span>
+              </div>
+              <div class="case-card__info">
+                <h3 class="case-card__title">/Интернет-магазин</h3>
+                <p class="case-card__cat mono">Разработка</p>
+              </div>
+            </li>
+            <li class="case-card">
+              <div class="case-card__media">
+                <img class="case-card__poster" src="https://picsum.photos/id/60/800/560" alt="Кейс: личный кабинет B2B" width="800" height="560" loading="lazy" decoding="async">
+                <video class="case-card__video" muted loop playsinline preload="none" poster="https://picsum.photos/id/60/800/560" data-src="assets/video/case-04.mp4"></video>
+                <span class="case-card__badge mono">04</span>
+              </div>
+              <div class="case-card__info">
+                <h3 class="case-card__title">/Личный кабинет B2B</h3>
+                <p class="case-card__cat mono">Веб-приложение</p>
+              </div>
+            </li>
+            <li class="case-card">
+              <div class="case-card__media">
+                <img class="case-card__poster" src="https://picsum.photos/id/164/800/560" alt="Кейс: сайт застройщика" width="800" height="560" loading="lazy" decoding="async">
+                <video class="case-card__video" muted loop playsinline preload="none" poster="https://picsum.photos/id/164/800/560" data-src="assets/video/case-05.mp4"></video>
+                <span class="case-card__badge mono">05</span>
+              </div>
+              <div class="case-card__info">
+                <h3 class="case-card__title">/Сайт застройщика</h3>
+                <p class="case-card__cat mono">Разработка</p>
+              </div>
+            </li>
+            <li class="case-card">
+              <div class="case-card__media">
+                <img class="case-card__poster" src="https://picsum.photos/id/49/800/560" alt="Кейс: сервис бронирования" width="800" height="560" loading="lazy" decoding="async">
+                <video class="case-card__video" muted loop playsinline preload="none" poster="https://picsum.photos/id/49/800/560" data-src="assets/video/case-06.mp4"></video>
+                <span class="case-card__badge mono">06</span>
+              </div>
+              <div class="case-card__info">
+                <h3 class="case-card__title">/Сервис бронирования</h3>
+                <p class="case-card__cat mono">Веб-сервис</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 7. ПРОЦЕСС ===== -->
+    <section class="process section section--dark" id="process">
+      <div class="container">
+        <h2 class="section__title reveal">
+          <span class="reveal__line"><span class="reveal__inner"><em>Процесс</em> Работы</span></span>
+        </h2>
+
+        <ol class="process__grid">
+          <li class="process__step fade-up">
+            <span class="process__num mono">01</span>
+            <h3 class="process__title">Анализ и исследование</h3>
+            <p class="process__desc">Погружаемся в бизнес, изучаем рынок и конкурентов, фиксируем цели продукта в метриках.</p>
+          </li>
+          <li class="process__step fade-up">
+            <span class="process__num mono">02</span>
+            <h3 class="process__title">Прототип и дизайн</h3>
+            <p class="process__desc">Структура, сценарии, кликабельный прототип и UI-кит. Согласуем до строчки кода.</p>
+          </li>
+          <li class="process__step process__step--accent fade-up">
+            <span class="process__num mono">03</span>
+            <h3 class="process__title">Разработка</h3>
+            <p class="process__desc">Чистый код, тесты, ревью. Каждые две недели — демо и рабочий билд на стенде.</p>
+          </li>
+          <li class="process__step fade-up">
+            <span class="process__num mono">04</span>
+            <h3 class="process__title">Запуск и поддержка</h3>
+            <p class="process__desc">Деплой, мониторинг 24/7, доработки по плану развития после релиза.</p>
+          </li>
+        </ol>
+
+        <div class="process__center fade-up">
+          <div class="process__circle">
+            <button class="process__circle-btn" type="button" data-modal-open>Начать проект</button>
+          </div>
+        </div>
+
+        <p class="process__note lead">Работаем итерациями: каждые две недели — демо и рабочий билд. Вы видите продукт в процессе, а не только в конце.</p>
+      </div>
+    </section>
+
+    <!-- ===== 8. СТЕК ===== -->
+    <section class="stack section" id="stack">
+      <div class="container">
+        <h2 class="section__title reveal">
+          <span class="reveal__line"><span class="reveal__inner"><em>Стек</em> Технологий</span></span>
+        </h2>
+        <ul class="stack__grid fade-up">
+          <li class="stack__badge mono">HTML/CSS/JS</li>
+          <li class="stack__badge mono">TypeScript</li>
+          <li class="stack__badge mono">React</li>
+          <li class="stack__badge mono">Next.js</li>
+          <li class="stack__badge mono">Vue</li>
+          <li class="stack__badge mono">Node.js</li>
+          <li class="stack__badge mono">Python</li>
+          <li class="stack__badge mono">PostgreSQL</li>
+          <li class="stack__badge mono">Docker</li>
+          <li class="stack__badge mono">Figma</li>
+          <li class="stack__badge mono">REST API</li>
+          <li class="stack__badge mono">Bitrix24</li>
+        </ul>
+        <p class="stack__note lead">Выбираем инструмент под задачу, а не наоборот. Передаём код и документацию — проект остаётся вашим.</p>
+      </div>
+    </section>
+
+    <!-- ===== 9. ОТЗЫВЫ ===== -->
+    <section class="reviews section" id="reviews">
+      <div class="container">
+        <h2 class="section__title reveal">
+          <span class="reveal__line"><span class="reveal__inner"><em>Истории</em> Клиентов</span></span>
+        </h2>
+        <ul class="reviews__grid">
+          <li class="review-card fade-up">
+            <svg class="review-card__quote" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M8 18C8 12 11 8 16 6L17 8C13.5 10 12 12.5 12 15H16V22H8V18ZM18 18C18 12 21 8 26 6L27 8C23.5 10 22 12.5 22 15H26V22H18V18Z" fill="currentColor"/></svg>
+            <img class="review-card__photo" src="https://picsum.photos/id/64/96/96" alt="Фото: Дмитрий Соколов" width="96" height="96" loading="lazy" decoding="async">
+            <blockquote class="review-card__text">«Запустили корпоративный сайт за 9 недель вместо обещанных 14 у других команд. Код передали с документацией, наш штатный разработчик подхватил без единого вопроса.»</blockquote>
+            <div class="review-card__stars" role="img" aria-label="Оценка 5 из 5">
+              <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1l2 5h5l-4 3.5 1.5 5L8 11.5 3.5 14.5 5 9.5 1 6h5z" fill="currentColor"/></svg>
+              <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1l2 5h5l-4 3.5 1.5 5L8 11.5 3.5 14.5 5 9.5 1 6h5z" fill="currentColor"/></svg>
+              <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1l2 5h5l-4 3.5 1.5 5L8 11.5 3.5 14.5 5 9.5 1 6h5z" fill="currentColor"/></svg>
+              <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1l2 5h5l-4 3.5 1.5 5L8 11.5 3.5 14.5 5 9.5 1 6h5z" fill="currentColor"/></svg>
+              <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1l2 5h5l-4 3.5 1.5 5L8 11.5 3.5 14.5 5 9.5 1 6h5z" fill="currentColor"/></svg>
+            </div>
+            <footer class="review-card__author">
+              <span class="review-card__name">Дмитрий Соколов</span>
+              <span class="review-card__post mono">CTO, РОЛЬФ Digital</span>
+            </footer>
+          </li>
+          <li class="review-card fade-up">
+            <svg class="review-card__quote" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M8 18C8 12 11 8 16 6L17 8C13.5 10 12 12.5 12 15H16V22H8V18ZM18 18C18 12 21 8 26 6L27 8C23.5 10 22 12.5 22 15H26V22H18V18Z" fill="currentColor"/></svg>
+            <img class="review-card__photo" src="https://picsum.photos/id/65/96/96" alt="Фото: Анна Верещагина" width="96" height="96" loading="lazy" decoding="async">
+            <blockquote class="review-card__text">«Личный кабинет B2B с интеграцией в 1С. Отдельно отмечу качество кода: покрытие тестами, чистый репозиторий, никаких «костылей» ради сроков. Релиз прошёл в дату из плана.»</blockquote>
+            <div class="review-card__stars" role="img" aria-label="Оценка 5 из 5">
+              <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1l2 5h5l-4 3.5 1.5 5L8 11.5 3.5 14.5 5 9.5 1 6h5z" fill="currentColor"/></svg>
+              <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1l2 5h5l-4 3.5 1.5 5L8 11.5 3.5 14.5 5 9.5 1 6h5z" fill="currentColor"/></svg>
+              <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1l2 5h5l-4 3.5 1.5 5L8 11.5 3.5 14.5 5 9.5 1 6h5z" fill="currentColor"/></svg>
+              <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1l2 5h5l-4 3.5 1.5 5L8 11.5 3.5 14.5 5 9.5 1 6h5z" fill="currentColor"/></svg>
+              <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1l2 5h5l-4 3.5 1.5 5L8 11.5 3.5 14.5 5 9.5 1 6h5z" fill="currentColor"/></svg>
+            </div>
+            <footer class="review-card__author">
+              <span class="review-card__name">Анна Верещагина</span>
+              <span class="review-card__post mono">Product Owner, Hoff</span>
+            </footer>
+          </li>
+          <li class="review-card fade-up">
+            <svg class="review-card__quote" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M8 18C8 12 11 8 16 6L17 8C13.5 10 12 12.5 12 15H16V22H8V18ZM18 18C18 12 21 8 26 6L27 8C23.5 10 22 12.5 22 15H26V22H18V18Z" fill="currentColor"/></svg>
+            <img class="review-card__photo" src="https://picsum.photos/id/91/96/96" alt="Фото: Игорь Мельник" width="96" height="96" loading="lazy" decoding="async">
+            <blockquote class="review-card__text">«После запуска передали исходники, инфраструктуру как код и инструкции по деплою. Через полгода вернулись на поддержку — мониторинг и доработки отрабатывают быстро.»</blockquote>
+            <div class="review-card__stars" role="img" aria-label="Оценка 5 из 5">
+              <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1l2 5h5l-4 3.5 1.5 5L8 11.5 3.5 14.5 5 9.5 1 6h5z" fill="currentColor"/></svg>
+              <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1l2 5h5l-4 3.5 1.5 5L8 11.5 3.5 14.5 5 9.5 1 6h5z" fill="currentColor"/></svg>
+              <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1l2 5h5l-4 3.5 1.5 5L8 11.5 3.5 14.5 5 9.5 1 6h5z" fill="currentColor"/></svg>
+              <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1l2 5h5l-4 3.5 1.5 5L8 11.5 3.5 14.5 5 9.5 1 6h5z" fill="currentColor"/></svg>
+              <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1l2 5h5l-4 3.5 1.5 5L8 11.5 3.5 14.5 5 9.5 1 6h5z" fill="currentColor"/></svg>
+            </div>
+            <footer class="review-card__author">
+              <span class="review-card__name">Игорь Мельник</span>
+              <span class="review-card__post mono">CEO, Gulliver</span>
+            </footer>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== 10. ПРО ZION ===== -->
+    <section class="about section" id="about">
+      <div class="container">
+        <h2 class="section__title reveal">
+          <span class="reveal__line"><span class="reveal__inner"><em>Про</em> ZION</span></span>
+        </h2>
+        <p class="about__manifesto reveal">
+          <span class="reveal__line"><span class="reveal__inner">ZION — продуктовая команда,</span></span>
+          <span class="reveal__line"><span class="reveal__inner">а не студия подрядчиков.</span></span>
+          <span class="reveal__line"><span class="reveal__inner">Мы собираем сайты как продукты:</span></span>
+          <span class="reveal__line"><span class="reveal__inner">с аналитикой, метриками</span></span>
+          <span class="reveal__line"><span class="reveal__inner">и планом развития после релиза.</span></span>
+        </p>
+        <ul class="about__numbers">
+          <li class="about__num-item fade-up">
+            <span class="about__num" data-count="75" data-suffix="+">0</span>
+            <span class="about__num-label">Нам доверяют</span>
+          </li>
+          <li class="about__num-item fade-up">
+            <span class="about__num" data-count="15" data-suffix="">0</span>
+            <span class="about__num-label">Лет на рынке</span>
+          </li>
+          <li class="about__num-item fade-up">
+            <span class="about__num" data-count="100" data-suffix="+">0</span>
+            <span class="about__num-label">Успешных проектов</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== 11. FAQ ===== -->
+    <section class="faq section" id="faq">
+      <div class="container">
+        <h2 class="section__title reveal">
+          <span class="reveal__line"><span class="reveal__inner"><em>Частые</em> Вопросы</span></span>
+        </h2>
+        <ul class="faq__list">
+          <li class="faq__item fade-up">
+            <button class="faq__question" type="button" aria-expanded="false" aria-controls="faq-a1" id="faq-q1">
+              <span>/Сроки — сколько занимает проект?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10H16M10 4V16" stroke="currentColor" stroke-width="1.5"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-a1" role="region" aria-labelledby="faq-q1">
+              <div class="faq__answer-inner">
+                <p>Лендинг — от 2 недель. Корпоративный сайт — 6–10 недель. Веб-приложение — от 3 месяцев. Точные сроки фиксируем после этапа анализа, работаем двухнедельными итерациями с демо в конце каждой.</p>
+              </div>
+            </div>
+          </li>
+          <li class="faq__item fade-up">
+            <button class="faq__question" type="button" aria-expanded="false" aria-controls="faq-a2" id="faq-q2">
+              <span>/Стоимость — из чего складывается смета?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10H16M10 4V16" stroke="currentColor" stroke-width="1.5"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-a2" role="region" aria-labelledby="faq-q2">
+              <div class="faq__answer-inner">
+                <p>Из объёма работ по этапам: аналитика, дизайн, фронтенд, бэкенд, интеграции и тестирование. После оценки вы получаете детальную смету по строкам — без скрытых часов и внезапных доплат.</p>
+              </div>
+            </div>
+          </li>
+          <li class="faq__item fade-up">
+            <button class="faq__question" type="button" aria-expanded="false" aria-controls="faq-a3" id="faq-q3">
+              <span>/Можно ли начать работу по этапам?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10H16M10 4V16" stroke="currentColor" stroke-width="1.5"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-a3" role="region" aria-labelledby="faq-q3">
+              <div class="faq__answer-inner">
+                <p>Да. Часто стартуют с аналитики и прототипа отдельным контрактом — это снижает риски и позволяет принять решение о разработке, уже видя структуру и макеты будущего продукта.</p>
+              </div>
+            </div>
+          </li>
+          <li class="faq__item fade-up">
+            <button class="faq__question" type="button" aria-expanded="false" aria-controls="faq-a4" id="faq-q4">
+              <span>/Кому принадлежат права на код?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10H16M10 4V16" stroke="currentColor" stroke-width="1.5"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-a4" role="region" aria-labelledby="faq-q4">
+              <div class="faq__answer-inner">
+                <p>Исключительно вам. Передаём исходники, доступы к репозиторию и инфраструктуре, документацию и инструкции по деплою. Проект остаётся вашим даже при отказе от поддержки.</p>
+              </div>
+            </div>
+          </li>
+          <li class="faq__item fade-up">
+            <button class="faq__question" type="button" aria-expanded="false" aria-controls="faq-a5" id="faq-q5">
+              <span>/Как устроены передача проекта и поддержка?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10H16M10 4V16" stroke="currentColor" stroke-width="1.5"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-a5" role="region" aria-labelledby="faq-q5">
+              <div class="faq__answer-inner">
+                <p>Передача — это отдельный этап: обучение вашей команды, документация, чек-лист. Дальше — договор поддержки: мониторинг 24/7, доработки по бэклогу, ежемесячный отчёт по метрикам.</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== 12. ФИНАЛЬНЫЙ CTA ===== -->
+    <section class="cta-final section section--dark" id="contacts">
+      <div class="container">
+        <h2 class="cta-final__title reveal">
+          <span class="reveal__line"><span class="reveal__inner">Расскажите</span></span>
+          <span class="reveal__line"><span class="reveal__inner">о проекте.</span></span>
+          <span class="reveal__line"><span class="reveal__inner">Оценим задачу</span></span>
+          <span class="reveal__line"><span class="reveal__inner">в течение дня.</span></span>
+        </h2>
+        <div class="cta-final__actions fade-up">
+          <button class="btn btn--light" type="button" data-modal-open>Обсудить проект</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== 13. FOOTER ===== -->
+  <footer class="footer section--dark">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="#hero" class="logo logo--invert" aria-label="ZION — наверх">ZI<em>on</em></a>
+          <p class="footer__slogan">Создаём сайты, которые повышают ваши продажи.</p>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__heading mono">/Контакты</h3>
+          <ul class="footer__links">
+            <li><a href="mailto:hello@zion.dev">hello@zion.dev</a></li>
+            <li><a href="tel:+74951234567">+7 (495) 123-45-67</a></li>
+            <li><a href="https://t.me/zion_dev" target="_blank" rel="noopener noreferrer">Telegram</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__heading mono">/Соцсети</h3>
+          <ul class="footer__socials">
+            <li><a href="https://t.me/zion_dev" target="_blank" rel="noopener noreferrer">Telegram <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.5"/></svg></a></li>
+            <li><a href="https://behance.net" target="_blank" rel="noopener noreferrer">Behance <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.5"/></svg></a></li>
+            <li><a href="https://vk.com" target="_blank" rel="noopener noreferrer">VK <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.5"/></svg></a></li>
+            <li><a href="https://youtube.com" target="_blank" rel="noopener noreferrer">YouTube <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.5"/></svg></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="mono">© 2011–2026 ZION. Все права защищены.</p>
+        <a class="mono footer__policy" href="#" data-policy>Политика обработки данных</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== МОДАЛЬНОЕ ОКНО ЗАЯВКИ ===== -->
+  <div class="modal" id="requestModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal__overlay" data-modal-close></div>
+    <div class="modal__panel" id="modalPanel">
+      <button class="modal__close" type="button" data-modal-close aria-label="Закрыть окно заявки">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 4L16 16M16 4L4 16" stroke="currentColor" stroke-width="1.5"/></svg>
+      </button>
+
+      <div class="modal__body" id="modalFormWrap">
+        <h2 class="modal__title" id="modalTitle">/Обсудим ваш проект</h2>
+        <p class="modal__sub">Ответим в течение рабочего дня и бесплатно оценим задачу.</p>
+
+        <form class="form" id="requestForm" novalidate>
+          <div class="form__field" data-field="name">
+            <label class="form__label mono" for="fName">Имя *</label>
+            <div class="form__control">
+              <input class="form__input" id="fName" name="name" type="text" autocomplete="name" required aria-required="true">
+              <span class="form__ok" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="currentColor" stroke-width="1.5"/></svg></span>
+            </div>
+            <p class="form__error" role="alert" hidden></p>
+          </div>
+
+          <div class="form__row">
+            <div class="form__field" data-field="phone">
+              <label class="form__label mono" for="fPhone">Телефон *</label>
+              <div class="form__control">
+                <input class="form__input" id="fPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" required aria-required="true">
+                <span class="form__ok" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="currentColor" stroke-width="1.5"/></svg></span>
+              </div>
+              <p class="form__error" role="alert" hidden></p>
+            </div>
+
+            <div class="form__field" data-field="email">
+              <label class="form__label mono" for="fEmail">Email</label>
+              <div class="form__control">
+                <input class="form__input" id="fEmail" name="email" type="email" autocomplete="email">
+                <span class="form__ok" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="currentColor" stroke-width="1.5"/></svg></span>
+              </div>
+              <p class="form__error" role="alert" hidden></p>
+            </div>
+          </div>
+
+          <div class="form__row">
+            <div class="form__field form__field--select" data-field="project">
+              <span class="form__label mono" id="lblProject">Тип проекта *</span>
+              <div class="select" id="selProject">
+                <button class="select__btn" type="button" id="selProjectBtn" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="lblProject selProjectBtn">
+                  <span class="select__value">Выберите тип</span>
+                  <svg class="select__chevron" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.5"/></svg>
+                </button>
+                <ul class="select__list" role="listbox" aria-labelledby="lblProject" tabindex="-1" hidden>
+                  <li class="select__option" role="option" aria-selected="false" data-value="landing">/Лендинг</li>
+                  <li class="select__option" role="option" aria-selected="false" data-value="corporate">/Корпоративный сайт</li>
+                  <li class="select__option" role="option" aria-selected="false" data-value="shop">/Интернет-магазин</li>
+                  <li class="select__option" role="option" aria-selected="false" data-value="app">/Веб-приложение</li>
+                  <li class="select__option" role="option" aria-selected="false" data-value="other">/Другое</li>
+                </ul>
+                <select class="select__native" name="projectType" aria-hidden="true" tabindex="-1">
+                  <option value="">Тип проекта</option>
+                  <option value="landing">Лендинг</option>
+                  <option value="corporate">Корпоративный сайт</option>
+                  <option value="shop">Интернет-магазин</option>
+                  <option value="app">Веб-приложение</option>
+                  <option value="other">Другое</option>
+                </select>
+              </div>
+              <p class="form__error" role="alert" hidden></p>
+            </div>
+
+            <div class="form__field form__field--select" data-field="budget">
+              <span class="form__label mono" id="lblBudget">Бюджет</span>
+              <div class="select" id="selBudget">
+                <button class="select__btn" type="button" id="selBudgetBtn" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="lblBudget selBudgetBtn">
+                  <span class="select__value">Не важно</span>
+                  <svg class="select__chevron" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.5"/></svg>
+                </button>
+                <ul class="select__list" role="listbox" aria-labelledby="lblBudget" tabindex="-1" hidden>
+                  <li class="select__option" role="option" aria-selected="false" data-value="to500">/До 500 000 ₽</li>
+                  <li class="select__option" role="option" aria-selected="false" data-value="500-1m">/500 000 — 1 000 000 ₽</li>
+                  <li class="select__option" role="option" aria-selected="false" data-value="1m-3m">/1 — 3 млн ₽</li>
+                  <li class="select__option" role="option" aria-selected="false" data-value="over3m">/Более 3 млн ₽</li>
+                </ul>
+                <select class="select__native" name="budget" aria-hidden="true" tabindex="-1">
+                  <option value="">Бюджет</option>
+                  <option value="to500">До 500 000 ₽</option>
+                  <option value="500-1m">500 000 — 1 000 000 ₽</option>
+                  <option value="1m-3m">1 — 3 млн ₽</option>
+                  <option value="over3m">Более 3 млн ₽</option>
+                </select>
+              </div>
+              <p class="form__error" role="alert" hidden></p>
+            </div>
+          </div>
+
+          <div class="form__field" data-field="message">
+            <label class="form__label mono" for="fMsg">Описание проекта</label>
+            <div class="form__control">
+              <textarea class="form__textarea" id="fMsg" name="message" rows="3" maxlength="600"></textarea>
+            </div>
+            <div class="form__helper-row">
+              <span class="form__counter mono" id="msgCounter">0 / 600</span>
+            </div>
+            <p class="form__error" role="alert" hidden></p>
+          </div>
+
+          <label class="form__check" data-field="agree">
+            <input class="form__check-input" type="checkbox" id="fAgree" name="agree" required aria-required="true">
+            <span class="form__check-box" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.5L4.5 9L10 3" stroke="#fff" stroke-width="1.5"/></svg>
+            </span>
+            <span class="form__check-text">Согласен(на) с обработкой персональных данных</span>
+          </label>
+          <p class="form__error form__error--check" role="alert" hidden></p>
+
+          <button class="btn btn--light form__submit" type="submit" id="submitBtn">
+            <span class="form__submit-label">Отправить</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Экран успеха -->
+      <div class="modal__success" id="modalSuccess" hidden>
+        <div class="modal__success-icon" aria-hidden="true">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="23" stroke="currentColor" stroke-width="2"/><path d="M14 25L21 32L34 17" stroke="currentColor" stroke-width="2.5"/></svg>
+        </div>
+        <h3 class="modal__success-title">Заявка отправлена</h3>
+        <p class="modal__success-text">Мы свяжемся с вами в течение рабочего дня. Номер обращения — <span class="mono" id="ticketNo"></span>.</p>
+        <button class="btn btn--light modal__success-btn" type="button" data-modal-close>Закрыть</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== COOKIE-БАННЕР ===== -->
+  <div class="cookie" id="cookieBanner" role="region" aria-label="Использование cookie" hidden>
+    <div class="cookie__inner container">
+      <p class="mono cookie__text">Мы используем файлы cookie. Оставаясь на сайте, вы соглашаетесь с политикой обработки данных.</p>
+      <div class="cookie__actions">
+        <button class="btn btn--light btn--sm" type="button" id="cookieAccept">Принять</button>
+        <a class="cookie__policy" href="#" data-policy>Политика обработки данных</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
